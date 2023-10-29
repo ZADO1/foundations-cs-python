@@ -21,3 +21,15 @@ def add_Matrices(matrixONE, matrixTwo): # O(n^2)
          row.append(matrixONE[i][z] + matrixTwo[i][z])
         result.append(row)
     return result
+#
+# part3
+def convertMatrix_Dictionary(rows, col):  #  O(n^2)
+    mat = []
+    print(f"Enter the num for {rows},{col}")
+    for i in range(rows):
+        row = []
+        for z in range(col):
+           num = input("Enter num :")
+           row.append(num)
+        mat.append(row)
+        print(mat)
