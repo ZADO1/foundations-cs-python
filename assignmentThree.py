@@ -97,3 +97,14 @@ def sequential_Search(s, list):  #O(n)
           print(f"{s} is found at index {i}")
           return i
     print(f"{s} is not found in the list")
+
+
+# part10
+def insertion_Sort(list):  # O(n^2)
+    for x in range(len(list) - 1):
+        for y in range(x + 1, len(list)):
+            if list[x] > list[y]:
+                temp = list[x]
+                list[x] = list[y]
+                list[y] = temp
+    print(list)
