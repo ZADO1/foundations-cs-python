@@ -33,3 +33,28 @@ def convertMatrix_Dictionary(rows, col):  #  O(n^2)
            row.append(num)
         mat.append(row)
         print(mat)
+
+# part4 and 5
+def display_matrix(matrix):  # O(n)
+    for row in matrix:
+     print(row)
+def dictionary_input():  #O(n)
+    dic = {}
+    while True:
+        element = input("Enter a element or enter 'q' to quit :")
+        if element == "q":
+            break
+        else:
+            value = input("Enter a value :")
+        dic[element] = value
+    dic2 = {}
+    for element, value in dic.items():
+        if value not in dic2:
+            dic2[value] = element
+        else:
+           dic2[value].append(element)
+    print("first  dic :")
+    print(dic)
+    print("invert dic :")
+    print(dic2)
+
