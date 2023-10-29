@@ -143,6 +143,7 @@ def main():  #### Overall Time Complexity is O(n^2)
             print("The two matrices are not rotations of each other.")
 
         main()
+
   elif choice == "3":
         dictionary_input()
         main()
