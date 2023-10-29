@@ -108,3 +108,68 @@ def insertion_Sort(list):  # O(n^2)
                 list[x] = list[y]
                 list[y] = temp
     print(list)
+
+
+def displayMenu():
+    print("1. Add matrices\n"
+          + "2. Check Rotation\n"
+          + "3. Invert Dictionary\n"
+          + "4. Convert Matrix to Dictionary\n"
+          + "5. Check Palindrome\n"
+          + "6. Search for an Element & Merge Sort\n"
+          + "7. Exit")
+def main():  #### Overall Time Complexity is O(n^2)
+  displayMenu()
+  choice = input("Enter your choice :")
+  if choice == "1":  ## if user enter 1
+       rows = int(input("Enter number of rows :"))
+       col = int(input("Enter number of col :"))
+       print("Enter elements of the first matrix")
+       matrix1 = get_matrix(rows, col)  ## calling function for matrix 1
+       print("Enter elements of the second matrix")
+       matrix2 = get_matrix(rows, col)  ## calling function for matrix 2
+       print("The sum of two matrices")
+       result_matrix = add_Matrices(matrix1, matrix2)  ## adding matrix1 and matrix 2
+       print(result_matrix)
+       main()
+  elif choice == "2":
+        matrix1 = matrix_input()
+        matrix2 = matrix_input()
+        if rotation_matrix(matrix1, matrix2):
+            print("Matrix 1 is a rotation of Matrix 2 .")
+            print("The two matrices are rotations of each other.")
+        else:
+            print("Matrix 1 is not a rotation of Matrix 2.")
+            print("The two matrices are not rotations of each other.")
+
+        main()
+  elif choice == "3":
+        dictionary_input()
+        main()
+  elif choice == "4":
+        rows = int(input("Enter rows :"))
+        col = int(input("Enter col :"))
+        convertMatrix_Dictionary(rows, col)
+        main()
+  elif choice == "5":
+      word = input("Enter a word :")
+      if palindrome(word):
+          print(f"{word} is palindrome")
+      else:
+          print(f"{word} is not palindrome")
+      main()
+  elif choice == "6":
+   list = [2, 4, 5, 12, 7, 1, 3]
+   print(f"List : {list}")
+   s = int(input("Enter an element to find :"))
+   sequential_Search(s, list)
+   print("list is sorted :")
+   insertion_Sort(list)
+   main()
+  elif choice == "7":
+      exit()
+  else:
+      print("invalid input please try again.")
+      main()
+if __name__ == '__main__':
+    main()
