@@ -12,4 +12,12 @@ def get_matrix(rows, col):
 
 print(get_matrix(1,1))
 
-
+# part2:
+def add_Matrices(matrixONE, matrixTwo): # O(n^2)
+    result = []
+    for i in range(len(matrixONE)):
+        row = []
+        for z in range(len(matrixONE[0])):
+         row.append(matrixONE[i][z] + matrixTwo[i][z])
+        result.append(row)
+    return result
