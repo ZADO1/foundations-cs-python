@@ -58,3 +58,13 @@ def dictionary_input():  #O(n)
     print("invert dic :")
     print(dic2)
 
+#     part 6
+def rotation_matrix(matone, mat2):  # O(n^2)
+    if len(matone) != len(mat2[0]) or len(matone[0]) != len(mat2):
+        return False
+    for i in range(len(matone)):  # O(n)
+        for z in range(len(matone[0])):  # O(n)
+           if matone[i][z] != mat2[z][i]:  # O(1)
+               return False
+    return True
+
