@@ -68,3 +68,16 @@ def rotation_matrix(matone, mat2):  # O(n^2)
                return False
     return True
 
+# part7
+def matrix_input():  # O(n^2)
+    rows = int(input("Enter the number of rows: "))
+    col = int(input("Enter the number of col: "))
+    list = []
+    for i in range(rows):
+        row = []
+        for z in range(col):
+            value = int(input(f"Enter the value at position ({i + 1},{z + 1}): "))
+            row.append(value)
+        list.append(row)
+    return list
+
