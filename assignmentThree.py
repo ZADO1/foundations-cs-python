@@ -89,3 +89,11 @@ def palindrome(s):
         return palindrome(s[1:-1])
     else:
         return False
+
+# part9
+def sequential_Search(s, list):  #O(n)
+    for i in range(len(list)):
+        if list[i] == s:
+          print(f"{s} is found at index {i}")
+          return i
+    print(f"{s} is not found in the list")
