@@ -1,3 +1,5 @@
+import webbrowser
+
 def displayMenu():
     print("1.Open Tab\n",
           "2.Close Tab\n",
@@ -8,11 +10,34 @@ def displayMenu():
           "7.Save Tabs\n",
           "8.Import Tabs\n",
           "9.Exit\n",)
+
+def openTab():
+    title = input("Enter The Title of the Website:")
+    url = input("Enter the URl:")
+
+
+
 def main():
- displayMenu()
-choice = input("Enter Your Choice:")
-if choice == "1":
-    title = input("Enter The Title:")
-    url = input("enter the URL:")
+    displayMenu()
+    choice = input("Enter Your Choice:")
+    if choice == "1":
+        openTab()
+
+
+main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
