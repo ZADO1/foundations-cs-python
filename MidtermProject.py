@@ -10,6 +10,7 @@ def displayMenu():
           "7.Save Tabs\n",
           "8.Import Tabs\n",
           "9.Exit\n",)
+
 tabs = []
 def openTab():
     title = input("Enter The Title of the Website:")
@@ -19,32 +20,80 @@ def openTab():
     main()
 
 def CloseTab():
-    print("tab  you have opened ",tabs)
-    if not tabs:
-        print("No tabs to close")
-    index = input("Enter the Index of the tab you wish to close: ")
-    tabs.pop(index)
 
+    print("Tabs you have opened:", tabs)
 
-
-
-
-
-    if index =='':
-        index = -1
-
+    if tabs:
+        while True:
+            index = int(input("Enter the Index of the tab you wish to close: "))
+            if 0 <= index < len(tabs):
+               tabs.pop(index)
+               print(f"Tab at index {index} closed successfully.")
+               print("Tabs you have opened:", tabs)
+            else:
+              print("Invalid index. Please enter a valid index.")
+              print("Tabs you have opened:", tabs)
     else:
-        index = int(index)
-        if index < -1 or index >= len(tabs):
-            print("Invalid index.")
-    main()
+        print("No tab to close.")
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+            # def CloseTab():
+#     print("tab  you have opened ",tabs)
+#     if tabs:
+#         index =int( input("Enter the Index of the tab you wish to close: "))
+#         if 0 >= index <= len(tabs):
+#             return
+#
+#             tabs.pop(index)
+#         # elif index == '':
+#         #     index = int(index)
+#         #     index = -1
+#         else:
+#              print("Invalid index.")
+#     else:
+#         print("no tab to close")
+
+
+
+
+
+
+
+
+
+    #     print("No tabs to close")
+    # else:
+    #    index = input("Enter the Index of the tab you wish to close: ")
+    #         index = int(index)
+    #
+    #    if index =='':
+    #
+    #      index = -1
+    #
+    #    else:
+    #     index = int(index)
+    #     if 0>= index >= len(tabs):
+    #
+    #     else:
+    #         print("Invalid index.")
+    #
+    #         return
+    #     tabs.pop(index)
 
     # main()
-
 
 
 
