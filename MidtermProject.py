@@ -40,17 +40,6 @@ def CloseTab():
     else:
         print("No tab to close.")
 
-    # Assuming you have a function to get the HTML content of a URL called 'get_html_content'
-    # and a list called 'tabs' where each element is a dictionary with a 'url' key.
-
-def get_html_content(url):
-    response = tabs.get(url)
-    return response.text
-
-def DisplayTabContent():
-    tabs
-
-
 def switchTab():
     print("Tabs you have opened:", tabs)
     if tabs:
