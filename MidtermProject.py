@@ -26,7 +26,11 @@ def CloseTab():
     if tabs:
         while True:
             index = int(input("Enter the Index of the tab you wish to close: "))
-            if 0 <= index < len(tabs):
+            # fixee the index if user click enter without adding any index
+            if index =="":
+                tabs.pop(-1)
+                print("Last tab closed successfully.")
+            elif 0 <= index < len(tabs):
                tabs.pop(index)
                print(f"Tab at index {index} closed successfully.")
                print("Tabs you have opened:", tabs)
@@ -36,64 +40,28 @@ def CloseTab():
     else:
         print("No tab to close.")
 
+    # Assuming you have a function to get the HTML content of a URL called 'get_html_content'
+    # and a list called 'tabs' where each element is a dictionary with a 'url' key.
+
+def get_html_content(url):
+    response = tabs.get(url)
+    return response.text
+
+def DisplayTabContent():
+    tabs
+
+
+def switchTab():
+    print("Tabs you have opened:", tabs)
+    if tabs:
+        index_display = int(input("Enter the Index of the tab to display its content (press Enter for the last tab): "))
+        if index_display == "":
+            index_display = -1
+        elif 0 <= index_display <len(tabs):
+            pass
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-            # def CloseTab():
-#     print("tab  you have opened ",tabs)
-#     if tabs:
-#         index =int( input("Enter the Index of the tab you wish to close: "))
-#         if 0 >= index <= len(tabs):
-#             return
-#
-#             tabs.pop(index)
-#         # elif index == '':
-#         #     index = int(index)
-#         #     index = -1
-#         else:
-#              print("Invalid index.")
-#     else:
-#         print("no tab to close")
-
-
-
-
-
-
-
-
-
-    #     print("No tabs to close")
-    # else:
-    #    index = input("Enter the Index of the tab you wish to close: ")
-    #         index = int(index)
-    #
-    #    if index =='':
-    #
-    #      index = -1
-    #
-    #    else:
-    #     index = int(index)
-    #     if 0>= index >= len(tabs):
-    #
-    #     else:
-    #         print("Invalid index.")
-    #
-    #         return
-    #     tabs.pop(index)
-
-    # main()
 
 
 
@@ -105,6 +73,9 @@ def main():
 
     elif choice =="2":
         CloseTab()
+    elif choice == "3":
+        switchTab()
+
 
 
 
