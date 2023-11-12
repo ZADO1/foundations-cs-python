@@ -33,15 +33,17 @@ def switchTab(url):
 def CloseTab():
     # check if list isempty
 
+
     print("Tabs you have opened:", tabs)
 
     if tabs:
         while True:
-            index = int(input("Enter the Index of the tab you wish to close: "))
+            index = input("Enter the Index of the tab you wish to close: ")
             # fixee the index if user click enter without adding any index
-            if index =="":
+
+            if  not index.strip():    #So if strip() means "if the result of strip() is not an empty string
                 tabs.pop(-1)
-                print("Last tab closed successfully.")
+                print("Last tab closed successfully.",tabs)
             elif 0 <= index < len(tabs):
                tabs.pop(index)
                print(f"Tab at index {index} closed successfully.")
