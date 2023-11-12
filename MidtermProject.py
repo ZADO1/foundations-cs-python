@@ -91,6 +91,7 @@ def displayTabs():
         print("No tabs to display:(")
 
 def clearAllTabs():
+
     tabs.clear()
     print("All tabs closed successfully.")
 
