@@ -1,4 +1,5 @@
 import urllib.request
+import json
 import requests
 from bs4 import BeautifulSoup
 import urllib3
@@ -98,6 +99,8 @@ def clearAllTabss():
 
 def savePath():
 
+    pass
+
 
 
 def main():
@@ -115,6 +118,8 @@ def main():
     elif choice == "6":
         clearAllTabss()
         main()
+    elif choice =="7":
+        savePath()
 
 
 
