@@ -90,7 +90,7 @@ def displayTabs():
     else:
         print("No tabs to display:(")
 
-def clearAllTabs():
+def clearAllTabss():
 
     tabs.clear()
     print("All tabs closed successfully.")
@@ -109,7 +109,7 @@ def main():
     elif choice == "4":
         displayTabs()
     elif choice == "6":
-        clearAllTabs()
+        clearAllTabss()
         main()
 
 
