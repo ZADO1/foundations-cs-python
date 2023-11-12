@@ -54,7 +54,7 @@ def switchTab(url):
         print(html_content)
     else:
         print("Failed to connect the web")
-    main()
+
 
 
 def CloseTab():
@@ -81,12 +81,6 @@ def CloseTab():
               print("Tabs you have opened:", tabs)
     else:
         print("No tab to close.")
-
-
-
-
-
-
 
 
 
