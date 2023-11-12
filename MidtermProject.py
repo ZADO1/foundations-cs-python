@@ -12,6 +12,7 @@ def displayMenu():
           "8.Import Tabs\n",
           "9.Exit\n",)
 
+
 tabs = []
 def openTab():
     title = input("Enter The Title of the Website:")
