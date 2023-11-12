@@ -96,6 +96,10 @@ def clearAllTabss():
     print("All tabs closed successfully.")
 
 
+def savePath():
+
+
+
 def main():
     displayMenu()
     choice = input("Enter Your Choice:")
