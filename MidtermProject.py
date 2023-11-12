@@ -1,5 +1,6 @@
 import webbrowser
-
+import requests
+from bs4 import BeautifulSoup
 def displayMenu():
     print("1.Open Tab\n",
           "2.Close Tab\n",
@@ -19,7 +20,18 @@ def openTab():
     tabs.append(tab)
     main()
 
+
+def switchTab(url):
+    print("Tabs you have opened:", tabs)
+    if tabs:
+        index_display = int(input("Enter the Index of the tab to display its content (press Enter for the last tab): "))
+
+
+
+
+
 def CloseTab():
+    # check if list isempty
 
     print("Tabs you have opened:", tabs)
 
@@ -40,14 +52,8 @@ def CloseTab():
     else:
         print("No tab to close.")
 
-def switchTab():
-    print("Tabs you have opened:", tabs)
-    if tabs:
-        index_display = int(input("Enter the Index of the tab to display its content (press Enter for the last tab): "))
-        if index_display == "":
-            index_display = -1
-        elif 0 <= index_display <len(tabs):
-            pass
+
+
 
 
 
@@ -64,7 +70,6 @@ def main():
         CloseTab()
     elif choice == "3":
         switchTab()
-
 
 
 
