@@ -72,7 +72,7 @@ class Linkedlist:
             prev = curr
             curr = curr.next
             self.size -=1   # decrease size
-            print(f"Node remove with value: {key} removed.")
+            print(f"Node remove with value: {key} ")
         if (curr == None):   # if current == none is empty
             return
 
