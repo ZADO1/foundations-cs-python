@@ -56,3 +56,26 @@ class Linkedlist:
             curr = curr.next   # here we change the pointer to the next node
         print("done")
 
+    def SeafchAndDelete(self,key):
+        # https://www.geeksforgeeks.org/python-program-for-deleting-a-node-in-a-linked-list/
+        curr = self.head
+
+        # If the  head node containe the data or key  simply we change the heade to the curr.next  means the next node
+        if (curr is not None):
+            if (curr.data == key):
+                self.head = curr.next
+                curr = None
+                return
+        while (curr is not None):
+            if curr.data == key:
+                break
+            prev = curr
+            curr = curr.next
+            self.size -=1   # decrease size
+            print(f"Node remove with value: {key} removed.")
+        if (curr == None):   # if current == none is empty
+            return
+
+
+
+
