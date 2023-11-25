@@ -44,6 +44,7 @@ class Linkedlist:
             self.tail = newNode
         self.size +=1    # increase size
 
+
     def DisplayNodes(self):
 
         if self.size == 0:
