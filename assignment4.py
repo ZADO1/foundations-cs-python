@@ -42,7 +42,7 @@ class Linkedlist:
         else:
             self.tail.next = newNode
             self.tail = newNode
-        self.size +=1    # we add one aaal size
+        self.size +=1    # increase size
 
     def DisplayNodes(self):
 
