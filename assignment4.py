@@ -76,6 +76,9 @@ class Linkedlist:
         if (curr == None):   # if current == none is empty
             return
 
+    def displayMenuAgain(self):
+
+
 
 
 
