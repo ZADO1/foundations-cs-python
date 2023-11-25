@@ -13,6 +13,16 @@ def linkedlistMenu():
           "c.Search for & Delete Node\n"+
           "d.Return to main menu")
 
+
+
+# linkedlist consists of nodes  we need to create class node
+# node containe data  and next we put next equal to none by default
+class Node:
+    def __int__(self,data):
+        self.data= data
+        self.next = None
+
+
 # we need to define class of linked list ,every linkedlist has a head and tail
 # we put head  and tail equal none because when w create linkedlist will be empty
 class Linkedlist:
@@ -22,7 +32,9 @@ class Linkedlist:
         self.size = 0
 #first add node first we check if the linked list is empty simply we change the head and tail  == newnode
 #if the linkedlist not empty  we change the tail.next == new node  and tail.next well be pointer none
-    def addNode(self,data):
+
+
+    def AddNode(self,data):
         newNode = Node(data)
         if self.size == 0:
             self.tail = newNode
@@ -32,10 +44,15 @@ class Linkedlist:
             self.tail = newNode
         self.size +=1    # we add one aaal size
 
+    def DisplayNodes(self):
 
-# linkedlist consists of nodes  we need to create class node
-# node containe data  and next we put next equal to none by default
-class Node:
-    def __int__(self,data):
-        self.data= data
-        self.next = None
+        if self.size == 0:
+            print("linkedlist is empty")
+            return
+        # i create a pointer curr and we start from head to print data
+        curr = self.head
+        while curr:
+            print(curr.data)
+            curr = curr.next   # here we change the pointer to the next node
+        print("done")
+
