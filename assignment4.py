@@ -20,6 +20,18 @@ class Linkedlist:
         self.head = None
         self.tail = None
         self.size = 0
+#first add node first we check if the linked list is empty simply we change the head and tail  == newnode
+#if the linkedlist not empty  we change the tail.next == new node  and tail.next well be pointer none
+    def addNode(self,data):
+        newNode = Node(data)
+        if self.size == 0:
+            self.tail = newNode
+            self.head = newNode
+        else:
+            self.tail.next = newNode
+            self.tail = newNode
+        self.size +=1    # we add one aaal size
+
 
 # linkedlist consists of nodes  we need to create class node
 # node containe data  and next we put next equal to none by default
