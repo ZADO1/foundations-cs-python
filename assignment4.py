@@ -280,7 +280,7 @@ class PriorityQueue:
             print(f"You have {max_attempts - limit} attempts left")
 
         new_student = Student(input_name, midterm_grade, final_grade, good_personality)
-        self.enqueue(new_student)    #this student is added to a priority queue.
+        self.enqueue(new_student)    #this student is added to a priority queuee.
 
 
 
