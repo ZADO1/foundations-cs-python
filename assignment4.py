@@ -77,7 +77,21 @@ class Linkedlist:
         if (curr == None):   # if current == none is empty
             return
 
-    def displayMenuAgain(self):
+        prev.next = curr.next
+        curr = None
+
+
+
+
+def isPalindrome(s):
+  return s == s[::-1]
+user_input = input("Enter a string: ")
+result = isPalindrome(user_input)
+if result:
+  print(f"{user_input} its a palindrome.")
+else:
+  print(f"{user_input} not a palindrome.")
+
 
 
 
