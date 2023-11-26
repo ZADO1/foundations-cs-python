@@ -122,10 +122,83 @@ def ispalindrome():
         print("Original word:", a)
         print("Reversed word:", reversed_word)
 
+class Student:
+    #constructor
+    def __int__(self,name,midterm,final_grade,good_personality):
+        self.name = name
+        self.midterm = midterm
+        self.finale_grade = final_grade
+        self.good_personality = good_personality
+class Nodee:
+    # create node data (student) and next = none
+    def __int__(self,student):
+        self.student = student
+        self.next = None
 
+class PriorityQueue:
+    def __init__(self):
+      self.head = None
+      self.size = 0
 
+    def enqueue(self, student):
+        node = Nodee(student)
 
+        if self.size == 0:
+            # If the list is empty, set the new node as the head
+            self.head = node
+            self.size += 1
+        else:
+            curr = self.head
+            prev = None
 
+            while curr:
+                if node.student.good_personality and not curr.student.good_personality:
+                    node.next = curr
+                    if not prev:
+                        self.head = node
+                    else:
+                        prev.next = node
+                    self.size += 1
+                    return
+                elif curr.student.good_personality and not node.student.good_personality:
+                    node.next = curr.next
+                    curr.next = node
+                    self.size += 1
+                    return
+                else:
+                    if (node.student.final_grade > curr.student.final_grade or(node.student.final_grade == curr.student.final_grade and  node.student.midterm_grade > curr.student.midterm_grade)):
+                        node.next = curr
+                        if not prev:
+                            self.head = node
+                        else:
+                            prev.next = node
+                        self.size += 1
+                        return
+                    elif node.student.final_grade < curr.student.final_grade or (node.student.final_grade == curr.student.final_grade  and node.student.midterm_grade < curr.student.midterm_grade):
+                        node.next = curr.next
+                        curr.next = node
+                        self.size += 1
+                        return
+                    else:
+
+                        if node.student.midterm_grade > curr.student.midterm_grade:
+                            node.next = curr
+                            if not prev:
+                                self.head = node
+                            else:
+                                prev.next = node
+                                self.size += 1
+                            return
+                        elif node.student.midterm_grade < curr.student.midterm_grade:
+                            node.next = curr.next
+                            curr.next = node
+                            self.size += 1
+                            return
+
+                prev = curr
+                curr = curr.next
+            prev.next = node
+            self.size += 1
 
 
 
