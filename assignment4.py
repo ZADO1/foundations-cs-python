@@ -200,5 +200,17 @@ class PriorityQueue:
             prev.next = node
             self.size += 1
 
-
+    def Dequeue(self):
+        if self.size == 0:  # check if the queu is empty
+            print(" no students ")
+        elif self.size == 1:
+            print(f" {self.head.student.name} enter the interview ")
+            self.head = None
+            self.size -= 1  # decrease sizze of queue and head equal none because the queue will be empty
+        else:
+            print(f" {self.head.student.name}enter the interview")
+            current = self.head  # create pointer
+            self.head = self.head.next  # change head to the next node
+            current.next = None
+            self.size -= 1
 
