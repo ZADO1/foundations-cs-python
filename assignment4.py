@@ -246,3 +246,42 @@ class PriorityQueue:
                 else:
                     print("Failed to meet the grade criteria after multiple attempts")
                     return
+
+        for attempt in range(1, max + 1):
+            final_grade = input("Enter final grade: ")
+
+            if final_grade.isdigit() and 0 <= int(midterm_grade) <= 100:
+                break
+            else:
+                print("Please enter a valid grade for the student.")
+                max += 1
+                if attempt < max:
+                    print(f"You have {max - attempt} attempts left")
+                else:
+                    print("Failed to meet the grade criteria after multiple attempts")
+                    return
+
+        limit = 0
+        max_attempts = 3
+
+        while limit < max_attempts:
+
+            good_personality = input("Does this student have a good personality?(Enter 'YES' or 'Y' for yes, 'NO' or 'N' for no):  ".lower())
+
+            if good_personality in ['yes', 'y']:
+                good_personality = True
+                break
+            elif good_personality in ['no', 'n']:
+                good_personality = False
+                break
+
+            print("Please enter either 'yes'/'y' or 'no'/'n'.")
+            limit += 1
+            print(f"You have {max_attempts - limit} attempts left")
+
+        new_student = Student(input_name, midterm_grade, final_grade, good_personality)
+        self.enqueue(new_student)    #this student is added to a priority queue.
+
+
+
+
