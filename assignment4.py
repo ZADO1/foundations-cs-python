@@ -81,16 +81,46 @@ class Linkedlist:
         curr = None
 
 
+# def isPalindrome(s):
+#   return s == s[::-1]
+# user_input = input("Enter a string: ")
+# result = isPalindrome(user_input)
+# if result:
+#   print(f"{user_input} its a palindrome.")
+# else:
+#   print(f"{user_input} not a palindrome.")
+#
 
+# create class stack |_| and i define 3 func
+class Stack:
+  def __init__(self):
+      self.items = []
 
-def isPalindrome(s):
-  return s == s[::-1]
-user_input = input("Enter a string: ")
-result = isPalindrome(user_input)
-if result:
-  print(f"{user_input} its a palindrome.")
-else:
-  print(f"{user_input} not a palindrome.")
+  def isEmpty(self):
+      return self.items == []
+
+  def push(self, data):
+      self.items.append(data)
+
+  def pop(self):
+      self.isEmpty()
+      return self.items.pop()
+
+def ispalindrome():
+    a = input("Enter a word: ")
+    s = Stack()
+    for i in a:
+        s.push(i)
+    reversed_word = ""
+
+    while not s.isEmpty():
+        reversed_word += s.pop()
+    if reversed_word == a:
+        print("The word is a palindrome")
+    else:
+        print("It's not a palindrome")
+        print("Original word:", a)
+        print("Reversed word:", reversed_word)
 
 
 
