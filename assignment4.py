@@ -214,3 +214,35 @@ class PriorityQueue:
             current.next = None
             self.size -= 1
 
+    def AddStudent(self):
+        max = 3
+        input_name = ""
+        midterm_grade = ""
+        final_grade = ""
+        good_personality = ""
+        for attempt in range(1, max + 1):   #the loop stops before reaching max so we add + 1 it includes max
+            input_name = input("Enter student name: ")
+
+            if input_name.isalpha():   # https://www.w3schools.com/python/ref_string_isalpha.asp
+                break
+            else:
+                print("Please enter a valid name for the student.")
+                if attempt < max:
+                    print(f"You have {max - attempt} attempts left")
+                else:
+                    print("Failed to meet the naming criteria after multiple attempts")
+                    return
+
+        for attempt in range(1, max + 1):
+            midterm_grade = input("Enter midterm grade: ")
+
+            if midterm_grade.isdigit() and 0 <=int(midterm_grade)<= 100:
+                break
+            else:
+                print("Please enter a valid grade for the student.")
+                max +=1
+                if attempt < max:
+                    print(f"You have {max - attempt} attempts left")
+                else:
+                    print("Failed to meet the grade criteria after multiple attempts")
+                    return
