@@ -129,7 +129,7 @@ def inputNumeric(numeric_value):
 #   print(f"{user_input} not a palindrome.")
 #
 
-# create class stack |_| and i define 3 func
+# create class stack |_| and i define 3 fun
 
 
 def ispalindrome():
